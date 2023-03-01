@@ -20,9 +20,9 @@ public class PaymentController {
 
     @Resource
     private PaymentService paymentService;
-
-    @PostMapping(value ="payment/create")
-    public CommonResult create(@RequestBody Payment payment){
+    @PostMapping(value = "/payment/create")
+    public CommonResult create(@RequestBody Payment payment)
+    {
         int result = paymentService.create(payment);
         log.info("插入返回结果:result={}"+result);
         if(result>0){

@@ -12,5 +12,5 @@ spring:
     data-password: root123
 
 mybatis:
-  mapper-locations: classpath:mapper/*.xml
-  type-aliases-package: com.atgx.springcloud.entities # 所有Entity别名类所在包
+  mapperLocations: classpath:mapper/*.xml
+  type-aliases-package: com.atgx.springcloud.entities    # 所有Entity别名类所在包

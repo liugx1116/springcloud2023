@@ -3,7 +3,6 @@ package com.atgx.springcloud.service.impl;
 import com.atgx.springcloud.dao.PaymentDao;
 import com.atgx.springcloud.entities.Payment;
 import com.atgx.springcloud.service.PaymentService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -26,6 +25,6 @@ public class PaymentServiceImpl implements PaymentService {
 
     @Override
     public Payment getPaymentById(long id) {
-        return paymentDao.getPaymentBuyId(id);
+        return paymentDao.getPaymentById(id);
     }
 }

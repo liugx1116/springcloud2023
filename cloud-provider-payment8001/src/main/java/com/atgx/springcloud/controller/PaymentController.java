@@ -21,15 +21,18 @@ public class PaymentController {
     @Resource
     private PaymentService paymentService;
     @PostMapping(value = "/payment/create")
-    public CommonResult create(@RequestBody Payment payment)
+    public String create(@RequestBody Payment payment)
     {
         int result = paymentService.create(payment);
-        log.info("插入返回结果:result={}"+result);
-        if(result>0){
-            return new CommonResult(200,"插入数据库成功",result);
-        }else{
-            return new CommonResult(444,"插入数据库失败",null);
-        }
+        log.info("*****插入操作返回结果:" + result);
+
+//        if(result > 0)
+//        {
+//            return new CommonResult(200,"插入数据库成功",result);
+//        }else{
+//            return new CommonResult(444,"插入数据库失败",null);
+//        }
+        return  null;
     }
 
     @GetMapping(value = "payment/get/{id}")

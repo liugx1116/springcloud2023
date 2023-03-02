@@ -16,10 +16,11 @@ import javax.annotation.Resource;
 @Service
 public class PaymentServiceImpl implements PaymentService {
     @Resource
-    PaymentDao paymentDao;
+    private PaymentDao paymentDao;
 
     @Override
-    public int create(Payment payment) {
+    public int create(Payment payment)
+    {
         return paymentDao.create(payment);
     }
 
